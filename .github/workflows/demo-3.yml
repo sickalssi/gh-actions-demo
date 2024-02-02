@@ -11,10 +11,6 @@ jobs:
          echo "Listing files in the repository(${{ github.workspace }}).."
          ls ${{ github.workspace }}
      - run: echo "Job's status is ${{ job.status }}"
-     - name: Faking an error
-       run: |
-         echo "Before faking an error"
-         exit 1
-         echo "After faking an error"
+     
 
 
