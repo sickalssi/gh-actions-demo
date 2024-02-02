@@ -1,6 +1,5 @@
 name: Demo Workflow 3
-on: push
-    workflow_dispatch
+on: workflow_dispatch
 jobs:
  Demo-Job:
    runs-on: ubuntu-latest
