@@ -1,5 +1,9 @@
 name: Demo Workflow 2
-on: push
+on: 
+  push:
+    branches:
+      - main
+      
 jobs:
  Demo-Job:
    runs-on: ubuntu-latest
