@@ -1,0 +1,21 @@
+name: Demo Workflow 1
+on: push
+    workflow_dispatch
+jobs:
+ Demo-Job:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Check out repository code
+       uses: actions/checkout@v4
+     - name: List files in the repository
+       run: |
+         echo "Listing files in the repository(${{ github.workspace }}).."
+         ls ${{ github.workspace }}
+     - run: echo "Job's status is ${{ job.status }}"
+     - name: Faking an error
+       run: |
+         echo "Before faking an error"
+         exit 1
+         echo "After faking an error"
+
+
